@@ -1,0 +1,37 @@
+Things to do After Installing Fedora:
+
+sudo nano /etc/dnf/dnf.conf
+
+max_parallel_downloads=10
+defaultyes=True
+
+sudo dnf update
+
+sudo dnf update && sudo dnf upgrade
+
+sudo fwupdmgr refresh --force 
+sudo fwupdmgr get-updates 
+sudo fwupdmgr update
+
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf upgrade --refresh 
+sudo dnf groupupdate core
+
+sudo dnf install gnome-tweak-tool
+
+install nvidia driver
+
+install nvidia driver through terminal in fedora:
+
+sudo dnf upgrade --refresh
+
+sudo dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/fedora36/x86_64/cuda-fedora36.repo
+
+sudo dnf install kernel-headers kernel-devel tar bzip2 make automake gcc gcc-c++ pciutils elfutils-libelf-devel libglvnd-opengl libglvnd-glx libglvnd-devel acpid pkgconfig dkms
+
+sudo dnf module install nvidia-driver:latest-dkms
+
+verify the installation by typing in nvidia-settings or nvidia-smi
