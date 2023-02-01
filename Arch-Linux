@@ -1,0 +1,29 @@
+iwctl
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect Airtel
+
+
+station wlan0 show
+
+-----------
+
+archinstall script
+
+-----------
+
+arch linux post install-
+
+uname -r
+sudo pacman -S linux-lts
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo pacman -S linux-lts-headers
+sudo reboot
+
+
+
+uname -r
+sudo pacman -S intel-ucode
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo pacman -S linux-firmware
+sudo pacman -Syyu
